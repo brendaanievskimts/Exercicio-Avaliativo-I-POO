@@ -1,14 +1,16 @@
+import java.util.ArrayList;
+
 public class Atleta {
 	private int numero;
-
 	private String nome;
-
 	private String pais;
+	private ArrayList<Medalha> medalhas;
 
 	public Atleta(int numero, String nome, String pais){
 		this.numero = numero;
 		this.nome = nome;
 		this.pais = pais;
+		this.medalhas = new ArrayList<>();
 	}
 
 	public int getNumero() {
@@ -24,12 +26,12 @@ public class Atleta {
 	}
 
 	public void adicionaMedalha(Medalha medalha) {
-
+		medalhas.add(medalha);
 	}
 
 	public int consultaQuantidadeMedalhas() {
-		return 0;
-	}
+		return medalhas.size();
+    }
 
 	@Override
 	public String toString() {
